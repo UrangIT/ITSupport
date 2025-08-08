@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IT Helpdesk Request</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background-color: white;
+      width: 95%;
+      max-width: 400px;
+      padding: 18px;
+      border-radius: 80px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-y: auto;
+    }
+    
+    .logo {
+      width: 190px;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #1c1c1e;
+    }
+
+    form {
+      width: 100%;
+    }
+
+    label {
+      font-weight: 600;
+      margin-top: 10px;
+      display: block;
+      color: #3a3a3c;
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #007aff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #005ecb;
+    }
+
+    .success {
+      color: green;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="urang Logo.png" alt="Urang Logo" class="logo" />
+    <h2>IT Helpdesk Request</h2>
+    <form action="mailto:support@urang.co.uk" method="post" enctype="multipart/form-data">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="Name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="Email" required />
+
+      
+                <label for="category">Fault Category:</label>
+                <select id="category" name="category" required>
+                    <option value="OneDrive">OneDrive</option>
+                    <option value="8x8">8x8</option>
+                    <option value="Out of Office">Out of Office</option>
+                    <option value="Email Access">Email Access</option>
+                    <option value="Laptop/PC problems">Laptop/PC problems</option>
+                    <option value="New email address">New email address</option>
+                    <option value="App request">App request</option>
+                    <option value="Email forward request">Email forward request</option>
+                    <option value="8x8 Call forwarding">8x8 Call forwarding</option>
+                    <option value="Other">Other</option>
+                </select>
+
+      <label for="description">Issue Description:</label>
+      <textarea id="description" name="Issue Description" rows="10" required></textarea>
+
+      <label for="teamviewer-id">TeamViewer ID:</label>
+      <input type="text" id="teamviewer-id" name="TeamViewer ID" optional />
+
+      <label for="teamviewer">TeamViewer Password:</label>
+      <input type="text" id="teamviewer" name="TeamViewer Password" optional />
+
+      <button type="submit">Submit Request</button>
+    </form>
+  </div>
+</body>
+</html>
